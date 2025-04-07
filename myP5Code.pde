@@ -37,7 +37,7 @@ setup = function() {
    fill(255,255,255);
    rect(-10, 300, 610, 150);
 
-}
+};
 
 draw = function(){
 if(mousePressed){
