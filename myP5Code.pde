@@ -37,6 +37,12 @@ setup = function() {
    fill(255,255,255);
    rect(-10, 300, 610, 150);
 
+var x = 0;
+while(x < 400){
+text("❄️", x, 340);
+x += 20;
+}
+
 };
 
 draw = function(){
