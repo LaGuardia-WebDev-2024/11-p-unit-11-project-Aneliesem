@@ -37,11 +37,38 @@ setup = function() {
    fill(255,255,255);
    rect(-10, 300, 610, 150);
 
+var snowflakes = ["⛄︎", "🌨️", "❅", "❆", "🏔️", "⛇"]
+
+text(snowflakes[0], 220, 200);
+text(snowflakes[1], 120, 200);
+text(snowflakes[2], 120, 260);
+text(snowflakes[3], 320, 200);
+text(snowflakes[4], 420, 200);
+text(snowflakes[5], 420, 100);
+
 var x = 0;
 while(x < 400){
 text("❄️", x, 340);
 x += 20;
 }
+
+
+// drawFish function 
+  drawFish(300, 300, color(193, 183, 238)); 
+};
+
+// Function to draw the fish
+var drawFish = function(fishX, fishY, fishColor) {
+  fill(fishColor);
+  strokeWeight(1);
+  stroke(0, 0, 0);
+  ellipse(fishX + 20, fishY, 13, 25); // Tail
+  ellipse(fishX, fishY, 40, 20); // Body
+  fill(0, 0, 0);
+  ellipse(fishX - 10, fishY - 2, 3, 5); // Eye
+  fill(226, 90, 76);
+  ellipse(fishX - 12, fishY + 4, 10, 3); // Mouth
+
 
 };
 
@@ -50,3 +77,4 @@ if(mousePressed){
 fill(random(0,255), random(0,255), random(0,255));
 text("❄️", random(-100,600), random(-100,500))}
 };
+
